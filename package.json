@@ -1,14 +1,15 @@
 {
-  "name": "markdown-to-html",
+  "name": "markdown-parser",
   "version": "1.0.0",
   "description": "An api for parsing markdown to html and html to markdown",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "npm install"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/SpiffGreen/markdown2html.git"
+    "url": "git+ssh://git@github.com/SpiffGreen/markdownparser.git"
   },
   "keywords": [
     "servejs",
@@ -21,9 +22,9 @@
   "author": "Spiff Jekey-Green",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SpiffGreen/markdown2html/issues"
+    "url": "https://github.com/SpiffGreen/markdownparser/issues"
   },
-  "homepage": "https://github.com/SpiffGreen/markdown2html#readme",
+  "homepage": "https://github.com/SpiffGreen/markdownparser#readme",
   "dependencies": {
     "serve-dot-js": "0.0.1"
   }
