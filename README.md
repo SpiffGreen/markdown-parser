@@ -1,6 +1,16 @@
 ## Markdown-Parser API
 An api for parsing markdown to html and html to markdown
 
+### Usage
+For any functions simply make a post request to the specified routes below:
+* Markdown To HTML - https://abc
+* HTML To Markdown - https://abc
+* HTML(minify) - https://abc
+* CSS(minify) - https://abc
+* Javascript(minify) - https://abc
+
+The expected data format is `application/json`
+
 ### Installation
 ```sh
 $ git clone https://github.com/SpiffGreen/markdown-parser.git
@@ -30,4 +40,4 @@ $ npm run dev
 ```
 
 ### License
-[MIT](./LICENSE) License
+[MIT](./LICENSE) Licensed
