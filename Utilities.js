@@ -37,7 +37,25 @@ function parseHTMLToMarkdown(str) {
     .replace(/<\s*br\s*\/\s*>/gim, "\n").trim();
 }
 
+function minifyHTML(str) {
+    return str.replace(/>\s+</g, "><");
+}
+
+function minifyCSS(str) {
+    return str.replace(/\s{1,}/g, " ");
+}
+
+function minifyJS(str) {
+    // forgot to add support for square braces [] in the rules
+    const rules = /\d+|"[^"]+"|'[^']+'|[a-zA-Z_\$][a-zA-Z_0-9\$]*|\{|\}|\[|\]|\||\?|:|;|\.|\(|\)|=|,/gim;
+    return str.match(rules).join(" ").replace(/\s*([\.,;=\)\(\}\{\[\]])\s*/g, "$1");
+    // return str.match(/[^"[^"]+"]/g);
+}
+
 module.exports = {
     parseHTMLToMarkdown,
-    parseMarkdownToHTML
+    parseMarkdownToHTML,
+    minifyHTML,
+    minifyCSS,
+    minifyJS
 };
